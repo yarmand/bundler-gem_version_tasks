@@ -7,10 +7,12 @@ Gem::Specification.new do |spec|
   spec.name          = "bundler-gem_version_tasks"
   spec.version       = Bundler::GemVersionTasks::VERSION
   spec.authors       = ["yann ARMAND"]
-  spec.email         = ["yarmand@yammer-inc.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.email         = ["yann@harakys.com"]
+  spec.summary       = %q{Helper rake tasks to update gem version.}
+  spec.description   = %q{To complete standards bundler rake tasks, 
+  this gem add a series of tasks to display, bump and write the gem version.
+    }
+  spec.homepage      = "https://github.com/yarmand/bundler-gem_version_tasks"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

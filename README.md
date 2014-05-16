@@ -1,24 +1,32 @@
 # Bundler::GemVersionTasks
 
-TODO: Write a gem description
+I have always use [jeweler](https://github.com/technicalpickles/jeweler) to develop my gems.
+I decided recently to simply rely on bundler but I missed so much the
+helper rake tasks to manage version that I reimplemented for bundler.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this gem (bundler-gem_version_tasks) as a development dependency in
+your gemspec:
 
-    gem 'bundler-gem_version_tasks'
+```
+gem.add_development_dependency 'bundler-gem_version_tasks'
+```
 
-And then execute:
+Add this to your Rakefile, instead of require 'bundler/gem_tasks':
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install bundler-gem_version_tasks
-
+```
+require "bundler/gem_version_tasks"
+```
 ## Usage
 
-TODO: Write usage instructions here
+```
+rake version             # print current version
+rake version:bump:major  # Bump the major version by 1
+rake version:bump:minor  # Bump the minor version by 1
+rake version:bump:patch  # Bump the patch version by 1
+rake version:write       # write a specific version - example: rake version:write VERSION=1.2.3
+```
 
 ## Contributing
 
