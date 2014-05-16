@@ -4,8 +4,8 @@ module Bundler
   class GemVersionTasks
     attr_reader :gemspec
 
-    def initialize( gemspec=nil, opts={} )
-      @gemspec     = gemspec || Bundler::GemHelper.gemspec
+    def initialize( opts={} )
+      @gemspec     = opts.fetch(:gemspec) { Bundler::GemHelper.gemspec }
       @git_command = opts.fetch(:git_command, 'git') 
     end
 
@@ -46,7 +46,7 @@ module Bundler
     end
 
     def self.install!
-      new(nil).install
+      new.install
     end
 
     include Rake::DSL if defined? Rake::DSL
@@ -91,4 +91,4 @@ module Bundler
   end
 end
 
-Bundler::GemVersionTasks.install!
+Bundler::GemVersionTasks.install! unless defined? Minitest

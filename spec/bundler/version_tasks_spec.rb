@@ -5,7 +5,7 @@ require 'bundler/gem_version_tasks'
 module Bundler
   describe GemVersionTasks do
 
-    subject { GemVersionTasks.new( gimme_gemspec, {:git_command => 'echo'}) }
+    subject { GemVersionTasks.new( { gemspec: gimme_gemspec, git_command: 'echo' } ) }
 
     describe '#bump' do
       it 'should raise an exception if what is not specifyed properly' do
