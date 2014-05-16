@@ -10,7 +10,7 @@ Add this gem (bundler-gem_version_tasks) as a development dependency in
 your gemspec:
 
 ```
-gem.add_development_dependency 'bundler-gem_version_tasks'
+spec.add_development_dependency 'bundler-gem_version_tasks'
 ```
 
 Add this to your Rakefile, instead of require 'bundler/gem_tasks':
