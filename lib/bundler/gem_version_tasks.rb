@@ -1,3 +1,4 @@
+require 'bundler/gem_tasks'
 require "bundler/gem_version_tasks/version"
 
 module Bundler
@@ -6,7 +7,7 @@ module Bundler
 
     def initialize( opts={} )
       @gemspec     = opts.fetch(:gemspec) { Bundler::GemHelper.gemspec }
-      @git_command = opts.fetch(:git_command, 'git') 
+      @git_command = opts.fetch(:git_command, 'git')
     end
 
     def bump(what)
