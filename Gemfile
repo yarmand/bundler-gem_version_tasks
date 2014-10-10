@@ -8,5 +8,5 @@ group :development do
   gem 'minitest-rg', "~> 5.0", ">= 5.0.0"
   gem 'guard-minitest', "~> 2.2", '>= 2.2.0'
   gem 'gimme'
-  gem 'pry-debugger'
+  gem 'pry-byebug'
 end
