@@ -39,7 +39,7 @@ module Bundler
     end
 
     def version_file
-      gemspec.files.grep(/version.rb$/).first
+      gemspec.files.grep(/\/version.rb$/).first
     end
 
     def version
