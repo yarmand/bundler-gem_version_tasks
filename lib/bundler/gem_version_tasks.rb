@@ -29,7 +29,7 @@ module Bundler
     end
 
     def replace_version(version_file, version)
-      lines = File.readlines(version_file).map { |l| l.gsub(/\s*VERSION\s*=.*/,"VERSION='#{version}'") }
+      lines = File.readlines(version_file).map { |l| l.gsub(/(\s*)VERSION(\s*)=(\s*).*/,"\\1VERSION\\2=\\3'#{version}'") }
       File.open(version_file,'w') {|f| f.write(lines.join('')) }
       commit_version(version_file, "Bumping to version #{version}")
     end
