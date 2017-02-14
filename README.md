@@ -1,4 +1,5 @@
 # Bundler::GemVersionTasks
+![travis status](https://travis-ci.org/yarmand/bundler-gem_version_tasks.svg?branch=master)
 
 I have always use [jeweler](https://github.com/technicalpickles/jeweler) to develop my gems.
 I decided recently to simply rely on bundler but I missed so much the
