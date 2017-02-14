@@ -3,6 +3,4 @@ rvm:
   - 2.1
   - 2.2
   - 2.3
-  - 2.4
 before_script: ruby -v
-script: bundle exec rspec --color
